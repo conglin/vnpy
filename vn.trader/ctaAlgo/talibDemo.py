@@ -15,16 +15,16 @@ class TalibDoubleSmaDemo(CtaTemplate):
     author = u'ideaplat'
 
     # 策略参数
-    fastPeriod = 5      # 快速均线参数
-    slowPeriod = 20     # 慢速均线参数
-    initDays = 5        # 初始化数据所用的天数
+    fastPeriod = 20      # 快速均线参数
+    slowPeriod = 60     # 慢速均线参数
+    initDays = 20       # 初始化数据所用的天数
 
     # 策略变量
     bar = None
     barMinute = EMPTY_STRING
 
     closeHistory = []       # 缓存K线收盘价的数组
-    maxHistory = 50         # 最大缓存数量
+    maxHistory = 20 * 10         # 最大缓存数量
 
     fastMa0 = EMPTY_FLOAT   # 当前最新的快速均线数值
     fastMa1 = EMPTY_FLOAT   # 上一根的快速均线数值
